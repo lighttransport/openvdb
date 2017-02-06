@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////
 //
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 //
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )
@@ -167,6 +167,9 @@ using namespace openvdb::points;
 class TestAttributeArray: public CppUnit::TestCase
 {
 public:
+    void setUp() override { AttributeArray::clearRegistry(); }
+    void tearDown() override { AttributeArray::clearRegistry(); }
+
     CPPUNIT_TEST_SUITE(TestAttributeArray);
     CPPUNIT_TEST(testFixedPointConversion);
     CPPUNIT_TEST(testRegistry);
@@ -2050,6 +2053,6 @@ TestAttributeArray::testProfile()
     }
 }
 
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )

@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2016 DreamWorks Animation LLC
+# Copyright (c) 2012-2017 DreamWorks Animation LLC
 #
 # All rights reserved. This software is distributed under the
 # Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )
@@ -437,6 +437,7 @@ SRC_NAMES := \
     points/AttributeArrayString.cc \
     points/AttributeGroup.cc \
     points/AttributeSet.cc \
+    points/points.cc \
     points/StreamCompression.cc \
     util/Formats.cc \
     util/Util.cc \
@@ -537,7 +538,7 @@ UNITTEST_SRC_NAMES := \
     unittest/TestVolumeToSpheres.cc \
 #
 
-DOC_FILES := doc/doc.txt doc/faq.txt doc/changes.txt doc/codingstyle.txt doc/examplecode.txt doc/api_0_98_0.txt doc/math.txt doc/python.txt
+DOC_FILES := doc/doc.txt doc/faq.txt doc/changes.txt doc/codingstyle.txt doc/examplecode.txt doc/api_0_98_0.txt doc/math.txt doc/points.txt doc/python.txt
 DOC_INDEX := doc/html/index.html
 DOC_PDF := doc/latex/refman.pdf
 
@@ -972,6 +973,6 @@ ifneq (,$(strip $(wildcard $(DEPEND))))
     include $(DEPEND)
 endif
 
-# Copyright (c) 2012-2016 DreamWorks Animation LLC
+# Copyright (c) 2012-2017 DreamWorks Animation LLC
 # All rights reserved. This software is distributed under the
 # Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )

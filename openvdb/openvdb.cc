@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////
 //
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 //
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )
@@ -154,6 +154,10 @@ __pragma(warning(default:1711))
     GridBase::clearRegistry();
     math::MapRegistry::clear();
 
+//#ifdef OPENVDB_ENABLE_POINTS
+    points::uninitialize();
+//#endif
+
 #ifdef OPENVDB_USE_BLOSC
     // We don't want to destroy Blosc, because it might have been
     // initialized by some other library.
@@ -164,6 +168,6 @@ __pragma(warning(default:1711))
 } // namespace OPENVDB_VERSION_NAME
 } // namespace openvdb
 
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////
 //
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 //
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )
@@ -46,8 +46,8 @@ using namespace openvdb::points;
 class TestPointConversion: public CppUnit::TestCase
 {
 public:
-    virtual void setUp() { openvdb::initialize(); }
-    virtual void tearDown() { openvdb::uninitialize(); }
+    void setUp() override { openvdb::initialize(); }
+    void tearDown() override { openvdb::uninitialize(); }
 
     CPPUNIT_TEST_SUITE(TestPointConversion);
     CPPUNIT_TEST(testPointConversion);
@@ -233,15 +233,6 @@ genPoints(const int numPoints, const double scale, const bool stride,
 void
 TestPointConversion::testPointConversion()
 {
-    // Define and register some common attribute types
-    using AttributeI        = TypedAttributeArray<int32_t>;
-    using AttributeF        = TypedAttributeArray<float>;
-    using AttributeVec3s    = TypedAttributeArray<openvdb::Vec3s>;
-
-    AttributeI::registerType();
-    AttributeF::registerType();
-    AttributeVec3s::registerType();
-
     // generate points
 
     const size_t count(1000000);
@@ -481,15 +472,6 @@ TestPointConversion::testPointConversion()
 void
 TestPointConversion::testStride()
 {
-    // Define and register some common attribute types
-    using AttributeI        = TypedAttributeArray<int32_t>;
-    using AttributeF        = TypedAttributeArray<float>;
-    using AttributeVec3s    = TypedAttributeArray<openvdb::Vec3s>;
-
-    AttributeI::registerType();
-    AttributeF::registerType();
-    AttributeVec3s::registerType();
-
     // generate points
 
     const size_t count(40000);
@@ -992,6 +974,6 @@ TestPointConversion::testComputeVoxelSize()
     }
 }
 
-// Copyright (c) 2012-2016 DreamWorks Animation LLC
+// Copyright (c) 2012-2017 DreamWorks Animation LLC
 // All rights reserved. This software is distributed under the
 // Mozilla Public License 2.0 ( http://www.mozilla.org/MPL/2.0/ )
