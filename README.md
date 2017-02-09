@@ -1,5 +1,7 @@
 ![OpenVDB](http://www.openvdb.org/images/openvdb_logo.png)
 
+[![Build Status](https://travis-ci.org/lighttransport/openvdb.svg?branch=master)](https://travis-ci.org/lighttransport/openvdb)
+
 [Website](http://www.openvdb.org) |
 [Discussion Forum](http://www.openvdb.org/forum) |
 [Documentation](http://www.openvdb.org/documentation/)
